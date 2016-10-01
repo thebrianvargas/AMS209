@@ -6,3 +6,5 @@ Research Interests: Iterative methods in linear algebra, linear programming, wan
 Advisor: Pascale Garaud
 Experience in Scientific Computing: 1
 Experience in Linux: 2
+OS/machine: Dell Inspiron running Ubuntu
+Profile picture: (:
