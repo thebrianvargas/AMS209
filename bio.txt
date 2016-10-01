@@ -1,0 +1,8 @@
+Name: Brian Vargas
+Major: Scientific Computing & Applied Mathematics
+Email: bvargas6@ucsc.edu
+Year: 1
+Research Interests: Iterative methods in linear algebra, linear programming, want to try out control theory
+Advisor: Pascale Garaud
+Experience in Scientific Computing: 1
+Experience in Linux: 2
