@@ -4,7 +4,7 @@ Email: bvargas6@ucsc.edu
 Year: 1
 Research Interests: Iterative methods in linear algebra, linear programming, want to try out control theory
 Advisor: Pascale Garaud
-Experience in Scientific Computing: 1
-Experience in Linux: 2
+Experience in Scientific Computing: 1 - a lot
+Experience in Linux: 2 - somewhat
 OS/machine: Dell Inspiron running Ubuntu
-Profile picture: (:
+Profile picture: Attached jpg file
