@@ -1,0 +1,7 @@
+Contains summary of each subdirectory for future reference.
+
+01: Basic program - no print
+02: Output variables
+03: Output variables onto file
+04: Input variables
+05: Input variables from file
