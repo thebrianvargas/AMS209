@@ -1,0 +1,16 @@
+#Brian Vargas (bvargas6@ucsc.edu) AMS209 HW1#4
+
+#Part a - produce file roster.txt that includes list of class participants
+grep '*' ~/209git/index.rst | tail -n +3 >> roster.txt
+
+#Part b - count number of students currently enrolled
+wc -l roster.txt | awk '{print $1}'
+
+#Part c - produce list of students' last names in reverse alphabetical order
+less roster.txt | awk '{print $2}' | cut -d ',' -f1 | sort -r
+
+#Part d - count how many AMS students are enrolled in class
+grep ams -i roster.txt | wc -l | awk '{print $1}'
+
+#Part e - produce list of SciCAM students' last names reverse alphabetical order
+grep scicam -i roster.txt | awk '{print $2}' | cut -d ',' -f1 | sort -r
