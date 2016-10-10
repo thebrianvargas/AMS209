@@ -5,3 +5,9 @@ Contains summary of each subdirectory for future reference.
 03: Output variables onto file
 04: Input variables
 05: Input variables from file
+06: Do Loop - series
+07: Functions - within
+08: Functions - external
+09: Functions - external multivariable
+10: Functions - 09, different a
+11: Functions - separate function file

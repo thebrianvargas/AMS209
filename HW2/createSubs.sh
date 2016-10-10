@@ -2,5 +2,5 @@
 #creates subdirectories problem01 to problem16
 for num in {01..16}; do
 #   echo problem$num #output test
-   mkdir problem$num
+   mkdir exercise$num
 done
