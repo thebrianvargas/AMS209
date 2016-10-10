@@ -1,0 +1,9 @@
+Score = 9/10
+
+In the future please don't write code that requires someone else to have the same set of folders as you. I can't verify your code without first modifying it.
+
+4a: Very close! We don't want the * at the beginning. Score = 1/2
+4b: Perfect! Score = 2/2
+4c: Perfect! Score = 2/2
+4d: Perfect! Score = 2/2
+4e: Perfect! Score = 2/2
