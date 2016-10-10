@@ -11,3 +11,7 @@ Contains summary of each subdirectory for future reference.
 09: Functions - external multivariable
 10: Functions - 09, different a
 11: Functions - separate function file
+12: Arrays - static column major print
+13: Arrays - static row major print
+14: Arrays - 13, initialize zero arrays
+15: Arrays - scalar mult & matrix addition
