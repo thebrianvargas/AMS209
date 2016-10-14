@@ -1,0 +1,7 @@
+Hello.
+
+1.
+I have included the subdirectories for the first part of the homework dealing with the practice Fortran problems. These are included under the Practice directory. Within this file we also have the extra credit script used to create the subdirectories as well as a menu to summarize what is in which subdirectory.
+
+2.
+The second part of the homework is included under the directory piSeries. Under this directory we have a script used to compile and run my program. We also include a fortran function to compute pi as well as a driver used to specifically run the inputs required for the homework. The outputs required for the homework are shown when we run the corresponding executable and I also provided a file called results.txt.

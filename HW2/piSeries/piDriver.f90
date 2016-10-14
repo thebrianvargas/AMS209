@@ -16,6 +16,7 @@ do i=1,4
   newPI = series(nmax, threshold)
 enddo
 
+!How to run in general:
 !newPI = series(nmax, threshold)
 
 end program piDriver
