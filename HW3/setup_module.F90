@@ -53,6 +53,18 @@ contains
        print*,'Choose your initial guess between x_min and x_max. Aborting now!'
        stop
     end if
+
+    print *, "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    print *, "                    Parameters"
+    print *, "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    print *, "Run Name      " // trim(runName)
+    print *, "Method Type      " // trim(methodType)
+    print *, "Multiplicity ",multiplicity
+    print *, "Function Type ",ftnType
+    print *, "Max Iterations ",maxIter
+    print *, "X Beginning ",xBeg
+    print *, "X End ",xEnd
+    print *, "Threshold ",threshold
     
   end subroutine setup_init
 

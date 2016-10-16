@@ -1,1 +1,2 @@
 1. Modify RootFinder.F90 to print target function and initial search value
+2. Modify setup_module.F90 to print runtime parameters
