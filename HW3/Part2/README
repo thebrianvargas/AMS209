@@ -9,3 +9,10 @@ A pdf is provided to outline more specific details.
 6. Recompile code everytime you change definition.h?
 7. Delete values from definition.h - does it change behavior?
 8. What happens if you type make debug?
+
+Instructions for running my code:
+Use the makefile (make) to compile and obtain an executable.
+Run executable - it will print summary to screen if convergence is met.
+  It will also generate an output file holding the history arrays.
+Use the makefile (make clean) to remove the excess clutter.
+-Can also use make debug to check for errors during compilation.

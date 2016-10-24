@@ -18,3 +18,4 @@ Run executable - it will print summary to screen if convergence is met.
   It will also generate an output file holding n,pi approximation,residual,
   and the threshold.
 Use the makefile (make clean) to remove the excess clutter.
+-Can also use make debug to check for errors during compilation

@@ -1,7 +1,0 @@
-4. You do not need to recompile the code everytime we change input runtime parameters. That's why this style of coding is strong. It reads the inputs from the file when the executable is run. Also, the init file isn't even part of the compilation process.
-
-6. After changing definition.h, we need to recompile. That is because there is a dependancy from the Fortran files to this header file. I went ahead and actually deleted everything in the file, ran the executable and it still worked.
-
-7. If we delete newton and modified_newton from definition.h and compile after, we see that it doesn't break the code. We have defaults preassigned in the code so that if we do not provide values for these newtons, the code will still work properly.
-
-8. make debug would make it so it checks for errors/bugs during compilation. It provides us with the information we need in order to debug our code efficiently.
