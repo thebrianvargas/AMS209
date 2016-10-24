@@ -29,6 +29,10 @@ contains
     elseif (ftnType == 2) then
        !! (2) f(x) = (x-1)log_10(x)
        f = (x - 1.) * log10(x)
+    elseif (ftnType == 3) then
+       f = exp(x)-10.
+    elseif (ftnType == 4) then
+       f = (x+1.)*(x-2.)
     end if
 
   end subroutine ftn_eval

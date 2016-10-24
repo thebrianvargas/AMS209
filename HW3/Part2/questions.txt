@@ -1,1 +1,0 @@
-1. Target Function. Do we just enter it manually? Or is there a way to obtain a symbolic representation? I just did f(x)=0 for now.

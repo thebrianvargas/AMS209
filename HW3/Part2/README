@@ -1,2 +1,11 @@
+The following tasks were done for this part. 
+A pdf is provided to outline more specific details.
+
 1. Modify RootFinder.F90 to print target function and initial search value
 2. Modify setup_module.F90 to print runtime parameters
+3. Plot to verify initial value is closer to root of target function
+4. Recompile code everytime you change your input runtime parameters?
+5. Add more functions and test them
+6. Recompile code everytime you change definition.h?
+7. Delete values from definition.h - does it change behavior?
+8. What happens if you type make debug?

@@ -31,7 +31,7 @@ program RootFinder
 
   !! Begining of the real implementation of the driver
   !! define usages of module variables and subroutines 
-  use setup_module,          only : setup_init, threshold, maxIter, methodType,xInit
+  use setup_module,          only : setup_init, threshold, maxIter, methodType,xInit, ftnType
   use findRootMethod_module, only : newton_method, modified_newton_method
   use output_module,         only : output_write
 
@@ -126,7 +126,16 @@ program RootFinder
      print *, '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
      print *, '             Solution Convergence Summary                          '
      print *, '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
-     print *, "Target Function f(x) = 0"
+     if (ftnType == 1) then
+       print *, "Target Function f(x) = x+e^x+10/(1+x^2)-5"
+     else if (ftnType == 2) then
+       print *, "Target Function f(x) = (x-1)log10(x)"
+     else if (ftnType == 3) then
+       print *, "Target Function f(x) = e^x-10"
+     else if (ftnType == 4) then
+       print *, "Target Function f(x) = (x+1)(x-2)"
+     endif
+
      print *, "Initial Search Value xInit = ", xInit
      print *, 'Your converged solution x = ', xNew
      print *, 'Solution converged in Nstep=', nIter-1
