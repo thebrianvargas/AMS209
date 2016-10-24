@@ -1,0 +1,3 @@
+run_name	'infSum' # [char] Specify output file name: eg, 'pi_infSum.dat'
+max_iter	20	 # [int] Maximum number of iterations
+threshold	1.d-12	 # [real] Threshold value for solution convergence

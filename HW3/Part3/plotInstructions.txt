@@ -1,0 +1,11 @@
+In order to create the GNU Plot, we use the following set of instructions.
+
+#To open up the interactive mode, type the following into terminal:
+gnuplot
+
+#Set output to save image file
+set term png
+set output "pi_plot.png"
+
+#Form the plot using the first two columns
+plot 'pi_infSum.dat' using 1:2
