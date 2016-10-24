@@ -1,0 +1,20 @@
+The following files have been provided to approximate pi in a modular fashion.
+
+* definition.h			Provides global definitions
+* pi_driver.F90			Driver program for approximating pi
+* pi_writeOutput.F90		Generates output file for history arrays
+* setup_module.F90		Gathers input information and sets up variables
+* makefile			Compilation: executable, debug, clean
+* pi_module.F90			Provides subroutines needed for algorithm
+* plotInstructions.txt		Instructions for generating GNUplot
+* pi_approx.init		Input file with runtime parameters
+* piPlot.png			One of the plots showing pi convergence
+* read_initFile_module.F90	Dongwook's file for reading init file
+
+
+Instructions for running my code:
+Use the makefile (make) to compile and obtain an executable.
+Run executable - it will print summary to screen if convergence is met.
+  It will also generate an output file holding n,pi approximation,residual,
+  and the threshold.
+Use the makefile (make clean) to remove the excess clutter.
