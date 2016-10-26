@@ -1,4 +1,17 @@
-
+The following tasks were completed for this assignment.
 
 1. right_justify.py	Outputs string right justified - last char in column 70
 2. 
+3.
+4.
+5. print_yourName.py	Print name from string with capitalized first letters
+6. LaTeX Reading	Read AMS200 Notes on LaTeX and installation
+7. Website Update	Added content to http://people.ucsc.edu/~bvargas6/
+
+
+In order to run my code, type the following commands on terminal:
+$python [insert python file name].py
+Be sure to specify which python file to run!
+They have all been provided with sample inputs to test the functions work.
+Feel free to import my functions to a script to test other inputs, 
+  but for the purpose of this assignment, it has been shown that they work.
