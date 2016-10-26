@@ -10,6 +10,9 @@ A pdf is provided to outline more specific details.
 7. Delete values from definition.h - does it change behavior?
 8. What happens if you type make debug?
 
+Note that for computing the derivative, I used basic numerical differentiation.
+It has a default h value but it could be expanded on to be more sophisticated.
+
 Instructions for running my code:
 Use the makefile (make) to compile and obtain an executable.
 Run executable - it will print summary to screen if convergence is met.

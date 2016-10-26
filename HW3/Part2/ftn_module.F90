@@ -44,14 +44,25 @@ contains
     real, intent(IN)  :: x
     real, intent(OUT) :: fprime
 
-    !! User specific function derivative
-    if (ftnType == 1) then
-       !! (1) derivative of the first function
-       fprime = 1. + exp(x) - 20.*x/(1.+x**2)**2
-    elseif (ftnType == 2) then
-       !! (2) derivative of the second function
-       fprime = log10(x) + (x - 1.)/x
-    end if
+    real :: h, f1,f2
+
+    !!NUMERICAL DIFFERENTIATION APPROACH
+    !!Set value for h. Realistically, we can grab these from init file
+    !!However, numerical differentiation is a major problem of its own
+    !!So we skip over its logistics here for simplification
+    h = 1.e-6
+    call ftn_eval((x+h),f1)
+    call ftn_eval(x,f2)
+    fprime = (f1-f2)/h
+
+!    !! User specific function derivative
+!    if (ftnType == 1) then
+!       !! (1) derivative of the first function
+!       fprime = 1. + exp(x) - 20.*x/(1.+x**2)**2
+!    elseif (ftnType == 2) then
+!       !! (2) derivative of the second function
+!       fprime = log10(x) + (x - 1.)/x
+!    end if
 
   end subroutine ftn_derivative
 

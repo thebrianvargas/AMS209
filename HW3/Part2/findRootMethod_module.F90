@@ -22,9 +22,11 @@ contains
   !! Conventional Newton's method
   subroutine newton_method(x,xNew,fNew,residual)
     implicit none
-    real, intent(IN) :: x
+    real, intent(INOUT) :: x
     real, intent(OUT) :: fNew, residual
     real :: xNew, f, fprime
+
+    real :: x1,x2,fprime1,fprime2,f1,f2
     
     !! compute function value evaluated at x
     call ftn_eval(x,f)
@@ -37,7 +39,24 @@ contains
        print *, '[Error: newton_method] Function derivative becomes very close to zero or zero.'
        print *, 'f=',f, 'df/dx =',fprime
        print *, 'Aborting now in order to avoid division by zero.'
-       stop
+
+       x1 = x-x*0.1
+       x2 = x+x*0.2
+       call ftn_eval(x1,f1)
+       call ftn_eval(x2,f2)
+       call ftn_derivative(x1,fprime1)
+       call ftn_derivative(x2,fprime2)
+       if (abs(f1/fprime1) <= abs(f2/fprime2)) then
+         f=f1
+         x=x1
+         fprime = fprime1
+       else
+         f=f2
+         x=x2
+         fprime = fprime2
+       endif
+
+       !stop
     end if
 
     !! Algorithm
