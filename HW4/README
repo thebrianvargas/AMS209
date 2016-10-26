@@ -3,7 +3,7 @@ The following tasks were completed for this assignment.
 1. right_justify.py	Outputs string right justified - last char in column 70
 2. 
 3.
-4.
+4. cumulative_sum.py	Inputs numerical list, outputs list with cumulative sum
 5. print_yourName.py	Print name from string with capitalized first letters
 6. LaTeX Reading	Read AMS200 Notes on LaTeX and installation
 7. Website Update	Added content to http://people.ucsc.edu/~bvargas6/
