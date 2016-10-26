@@ -1,3 +1,6 @@
+!Copied from Dongwook to read init file - original purpose stated below
+
+
 !!------------------------------------------------------------------
 !! A Fortran example code for finding a root of a user-defined 
 !! function f(x) = 0.

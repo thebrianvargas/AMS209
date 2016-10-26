@@ -1,5 +1,4 @@
-!Fix format specifier so it matches what we want
-
+!Writes history arrays onto their own file
 module pi_writeOutput
 
   use setup_module, only : runName

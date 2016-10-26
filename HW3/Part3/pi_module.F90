@@ -1,9 +1,5 @@
-
-
-
+!Contains subroutines used to execute algorithm
 module pi_module
-
-!  #include "definition.h"
 
 contains
   

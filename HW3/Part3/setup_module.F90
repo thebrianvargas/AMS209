@@ -1,6 +1,4 @@
-
-
-
+!Sets up input parameters based off init file for runtime customization
 module setup_module
 
 #include "definition.h"
