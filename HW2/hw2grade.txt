@@ -1,9 +1,8 @@
-homework 2 Score = 10/10
+homework 2 Score = 12/10
 
-Problem 1: Extra Credit = 0/2
+Problem 1: Extra Credit = 2/2
 
- Notes: Not quite. Your script should have made an arbitrary number of files
- not 16. Since it's extra credit, the grading is harsher.
+ Notes: Grading scheme has changed. Well done!
 
 
 Problem 2: Score = 10/10
