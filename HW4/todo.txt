@@ -1,0 +1,2 @@
+Add comments and documentation for both header file and functions
+Check if we can use sorted function in part 3. If not, implement using <,>
