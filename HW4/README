@@ -1,8 +1,8 @@
 The following tasks were completed for this assignment.
 
 1. right_justify.py	Outputs string right justified - last char in column 70
-2. 
-3.
+2. part2.py		Contains do_twice and print_twice functions for #2
+3. is_sorted.py		Inputs list, determines if it is already sorted
 4. cumulative_sum.py	Inputs numerical list, outputs list with cumulative sum
 5. print_yourName.py	Print name from string with capitalized first letters
 6. LaTeX Reading	Read AMS200 Notes on LaTeX and installation
@@ -11,7 +11,7 @@ The following tasks were completed for this assignment.
 
 In order to run my code, type the following commands on terminal:
 $python [insert python file name].py
-Be sure to specify which python file to run!
+Be sure to: 1) specify which python file to run 2) be in correct directory.
 They have all been provided with sample inputs to test the functions work.
 Feel free to import my functions to a script to test other inputs, 
   but for the purpose of this assignment, it has been shown that they work.
