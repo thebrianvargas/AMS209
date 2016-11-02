@@ -15,3 +15,5 @@ Be sure to: 1) specify which python file to run 2) be in correct directory.
 They have all been provided with sample inputs to test the functions work.
 Feel free to import my functions to a script to test other inputs, 
   but for the purpose of this assignment, it has been shown that they work.
+Note that for the most part, we assume the inputs are correct since we weren't
+  asked to double check for appropriate inputs!
