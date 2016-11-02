@@ -1,6 +1,19 @@
-#right justifies string so that last character is in column 70
-
+"""
+Brian Vargas (bvargas6@ucsc.edu)
+AMS209 Foundations of Scientific Computing
+Homework #4 - Problem #1
+right_justify.py
+"""
 def right_justify(s):
+   """
+   Right justifies string so that last character is in column 70
+
+   Inputs:
+      * s   String to be right-justified
+
+   Prints:
+      String s right-justified to column 70
+   """
    #string too big to place last character in column 70
    if len(s) > 70:
       print "Inputted string is too long"
