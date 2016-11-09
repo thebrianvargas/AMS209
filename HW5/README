@@ -1,0 +1,8 @@
+The following files are included for this homework submission:
+
+* nwords.py		List/Dictionary creation of first N words in txt file
+* words.txt		txt file used nwords.py for extraction
+* lengthConvert.py	Converting lengths of different units
+* reasoning.pdf		Explains the implementation in lengthConvert.py
+
+Note: run my code using "python x.py" in the appropriate working directory.
