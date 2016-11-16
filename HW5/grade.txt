@@ -1,0 +1,13 @@
+Score = 9/10
+
+Problem 1: 3/4
+
+	Notes: Well done! Need to include the ability to search for words in the stored dictionaries.
+
+Problem 2: 3/3
+
+	Notes: Well done!
+
+Problem 3: 3/3
+
+	Notes: Well done!
