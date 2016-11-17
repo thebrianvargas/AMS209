@@ -1,6 +1,9 @@
 ########################################################################################
 #                       Makefile for RootFinding code
 #                Written by Prof. Dongwook Lee, AMS 209, UCSC
+#                Modified by Brian Vargas (bvargas6@ucsc.edu) 
+#
+#                Modification: make clean now removes init files
 ########################################################################################
 
 FC	= gfortran
@@ -41,7 +44,7 @@ $(EXE_FILE) : $(OBJS)
 #######################################################################################
 #SOME USEFUL COMMANDS
 clean:
-	@rm -f *.o *.mod *~ rootFinder.exe *.dat
+	@rm -f *.o *.mod *~ rootFinder.exe *.dat* *.init*
 
 # debug: clean
 debug: FFLAGS_OPT = $(FFLAGS_DEBUG)
