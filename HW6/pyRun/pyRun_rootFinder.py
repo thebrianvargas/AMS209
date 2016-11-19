@@ -19,7 +19,10 @@ Directory structure:
 #import necessary Python modules
 import os
 import numpy as np
+import matplotlib as mpl
+mpl.use('Agg')
 import matplotlib.pyplot as plt
+
 
 def adjust_file(fileName):
    #if we already have this file name, rename it to the next number
@@ -73,18 +76,36 @@ def run_rootFinder():
    """
    os.system("./rootFinder.exe")
 
-def plot_data(plotFileName, adjust=True):
+def plot_data(plotFileName, threshold, adjust=True):
    #import dat file into data array
-   data = np.loadtxt("../rootFinder_newton.dat")
+   data = np.loadtxt("rootFinder_newton.dat")
    #dat files have the following columns: iter, solution, threshold, error
 
+   #same y-scale throughout all figures. we want to make points visible
+   ymin = min(min(data[:,1]),min(data[:,3]))-0.025
+   ymin = -.025
+   ymax = 1.025*max(max(data[:,1]),max(data[:,3]))
+
    #produce figure: iter vs solutions - plot to both screen and file
-   plt.plot(data[:,0],data[:,1],'o-')
+   plt.figure(figsize=(8,6),dpi=80)
+   plt.subplot(1,2,1)
+   plt.plot(data[:,0],data[:,1],'o-',color='blue')
    plt.xlabel("Number of Iterations")
    plt.ylabel("Solutions")
    plt.title("Iterations vs Solutions Plot")
+   plt.ylim(ymin,ymax)
+
+   plt.subplot(1,2,2)
+   plt.plot(data[:,0],data[:,3],'o-',color='red')
+   plt.xlabel("Number of Iterations")
+   plt.ylabel("Errors")
+   plt.title("Iterations vs Errors Plot")
+   plt.ylim(ymin,ymax)
+
+   plt.suptitle('Threshold: '+str(threshold))
    plt.savefig(plotFileName, dpi=72)
-   plt.show()
+
+   #plt.show()
    #if we already have a dat file, rename it to the next number
    if adjust:
       adjust_file("rootFinder_newton.dat")
@@ -113,5 +134,5 @@ if __name__ == "__main__":
       run_rootFinder()
       plotName = "result_"+str(my_ftn_type)+"_"+str(threshold)+".png"
       #don't readjust dat file names if it's the last element
-      plot_data(plotName, adjust=not (i==len(thresholds)))
+      plot_data(plotName, threshold, adjust=not (i==len(thresholds)))
       i = i+1
