@@ -105,16 +105,12 @@ def plot_data(plotFileName, threshold, adjust=True):
    plt.suptitle('Threshold: '+str(threshold))
    plt.savefig(plotFileName, dpi=72)
 
-   #plt.show()
+   plt.show()
+
    #if we already have a dat file, rename it to the next number
    if adjust:
       adjust_file("rootFinder_newton.dat")
-   return
-   #1. produces 2 figures: iter# vs solutions, iter# vs errors
-   #2. plot as subfigures or separate figures
-   #3. in each figure, include xlabel,ylabel,title,line plot with 
-   #   reasonable linestyle, marker
-   #4. have proper x,y ranges to properly fit. same scaling for both
+
 
 if __name__ == "__main__":
    #run these functions only if we want to actually use them
@@ -123,16 +119,25 @@ if __name__ == "__main__":
 
    #use these particular input parameters
    my_ftn_type = 2
-   thresholds = [1.e-4,1.e-6,1.e-8]
+   thresholds = ["1.e-4","1.e-6","1.e-8"]
+   initial_guess = [1.5,50]
 
    #set runtime parameters, call functions properly to execute fortran code
    #  used for 3 different thresholds on same function for comparison
    i = 1
    make_make()
    for threshold in thresholds:
-      runtimeParameters_init(threshold,ftn_type=my_ftn_type)
+      #obtain results for farther initial guess
+      runtimeParameters_init(threshold,ftn_type=my_ftn_type,init_guess=1000,x_end=10000)
       run_rootFinder()
-      plotName = "result_"+str(my_ftn_type)+"_"+str(threshold)+".png"
+      plotName = "far_result_"+str(my_ftn_type)+"_"+str(threshold)+".png"
       #don't readjust dat file names if it's the last element
       plot_data(plotName, threshold, adjust=not (i==len(thresholds)))
+
+      #obtain results for close initial guess
+      runtimeParameters_init(threshold,ftn_type=my_ftn_type,init_guess=1.5)
+      run_rootFinder()
+      plotName = "close_result_"+str(my_ftn_type)+"_"+str(threshold)+".png"
+      plot_data(plotName, threshold, adjust=not (i==len(thresholds)))
+
       i = i+1
