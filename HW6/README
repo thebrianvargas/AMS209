@@ -6,7 +6,7 @@ One directory holds all the Fortran files, one holds the Python script.
 The makefile was adjusted in order to fully clean the files.
 
 Run my code doing:
-python /pyRun/pyRun_rootFinder.py
+python pyRun/pyRun_rootFinder.py
 
 My code will execute for 3 different thresholds as specified.
 It will also execute for a close and a far initial guess.

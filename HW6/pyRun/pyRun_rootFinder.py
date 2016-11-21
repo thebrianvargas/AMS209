@@ -23,6 +23,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
+#NOTE: my machine couldn't display plot directly so I used agg and then .show() after saving. 
 
 def adjust_file(fileName):
    #if we already have this file name, rename it to the next number
