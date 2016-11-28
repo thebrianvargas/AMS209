@@ -94,7 +94,7 @@ contains
     real, dimension(n,n), intent(IN) :: U
     real, dimension(n,n), intent(INOUT) :: LU
 
-    integer i,j
+    integer :: i,j
     do j=1,n
       do i=1,j
         LU(i,j) = U(i,j)
