@@ -5,7 +5,7 @@ program linear_solve
   use backward_solve,   only : Usolve
   use write_data,       only : write_solution
   use write_to_screen,  only : print_inputs
-  use LU_decomp,        only : lu
+  use LU_decomp,        only : getLU,getPLU
 
   implicit none
 
@@ -28,7 +28,7 @@ program linear_solve
 
   call print_inputs(A,b,n)
 
-  call lu(A,n,LU)
+  call getLU(A,n,LU)
   call print_inputs(LU,b,n)
 
   call Lsolve(LU,b,n,y)
