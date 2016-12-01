@@ -1,0 +1,9 @@
+run_name 			 'newton'
+method_type 			 'newton'
+x_beg 			 -10.0
+x_end 			 10.0
+max_iter 			 1000
+threshold 			 1.e-8
+ftn_type 			 2
+init_guess 			 1.5
+multiplicity 			 2
