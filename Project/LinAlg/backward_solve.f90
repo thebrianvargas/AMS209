@@ -15,11 +15,6 @@ contains
     integer :: i,j
     real :: sub
 
-    !Initialize solution vector first
-    do i=1,n
-      x(i) = 0
-    end do
-
     !Backward iteration to obtain vector backwards
     do i=n,1,-1
       sub = 0

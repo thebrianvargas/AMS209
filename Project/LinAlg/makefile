@@ -13,6 +13,7 @@ FFLAGS_OPT = -ggdb -O3 -fdefault-real-8 -fdefault-double-8 -ffree-line-length-no
 EXE_FILE = linear_solve.exe
 
 OBJS = 	LU_decomp.o \
+	read_data.o\
 	write_data.o \
 	linear_solve.o \
 	forward_solve.o \
@@ -36,7 +37,7 @@ $(EXE_FILE) : $(OBJS)
 ########################################################
 #SOME USEFUL COMMANDS
 clean:
-	@rm -f *.o *.mod *~ linear_solve.exe
+	@rm -f *.o *.mod *~ linear_solve.exe *.dat
 
 #debug: clean
 debug: FFLAGS_OPT = $(FFLAGS_DEBUG)
@@ -44,6 +45,7 @@ debug: $(EXE_FILE)
 
 ########################################################
 #LET'S DEFINE SOME MODULE DEPENDENCIES:
-linear_solve.o: forward_solve.o backward_solve.o write_to_screen.o write_data.o LU_decomp.o
+linear_solve.o: forward_solve.o backward_solve.o write_to_screen.o write_data.o LU_decomp.o read_data.o
+write_data.o: write_to_screen.o
 
 ########################################################

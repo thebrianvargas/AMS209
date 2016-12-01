@@ -57,6 +57,7 @@ contains
     real :: largest
     integer :: k
 
+    !Swap rows for everything during a pivot
     largest = maxval(abs(A((j+1):n,j)))
     if (A(j,j) /= largest) then
       print *, "Pivot needed!!"
@@ -132,10 +133,6 @@ contains
     b(j) = temp
 
   end subroutine vRowSwap
-
-!!!NOTE: we could combine partial pivoting into normal gaussian and only
-!activate it when we find that the user is asking for it via a conditional
-!statement - keep P as an identity so that b doesn't change
 
   !!Create identity matrix of dimension n
   subroutine eye(n,Id)
