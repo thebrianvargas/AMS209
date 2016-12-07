@@ -58,11 +58,11 @@ contains
     integer :: k
 
     !Swap rows for everything during a pivot
-    largest = maxval(abs(A((j+1):n,j)))
+    largest = maxval(abs(A(j:n,j)))
     if (A(j,j) /= largest) then
-      print *, "Pivot needed!!"
+!      print *, "Pivot needed!!"
       k = j+maxloc(abs(A((j+1):n,j)),1)
-      print *,k
+!      print *,k
       call mRowSwap(A,n,j,k)
       call mRowSwap(LU,n,j,k)
       call vRowSwap(b,n,j,k)

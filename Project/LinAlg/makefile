@@ -37,7 +37,7 @@ $(EXE_FILE) : $(OBJS)
 ########################################################
 #SOME USEFUL COMMANDS
 clean:
-	@rm -f *.o *.mod *~ linear_solve.exe *.dat
+	@rm -f *.o *.mod *~ linear_solve.exe *.dat *.png
 
 #debug: clean
 debug: FFLAGS_OPT = $(FFLAGS_DEBUG)

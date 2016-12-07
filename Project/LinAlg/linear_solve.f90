@@ -23,6 +23,7 @@ program linear_solve
 !  real, dimension(n,n) :: LU,A
 !  real, dimension(n) :: x,y,b
 
+  character(len=7) :: outFile
   integer :: i
 
    !Testing purposes
@@ -48,17 +49,40 @@ program linear_solve
   allocate(x(n))
   allocate(y(n))
 
-  call getLU(A,n,LU)
-  print*,"'LU' = "
-  call print_matrix(LU,n)
+  do i=1,2
+    if (i==1) then
+      print*,"LU without Pivoting"
+      call getLU(A,n,LU)
+      outFile = "x_1.dat"
+    else
+      print*,"LU with Partial Pivoting"
+      call getPLU(A,n,LU,b)
+      outFile = "p_1.dat"
+    end if
+!    print*,"'LU' = "
+!    call print_matrix(LU,n)
 
-  call Lsolve(LU,b,n,y)
-  print *, "y = "
-  call print_vector(y,n)
+    call Lsolve(LU,b,n,y)
+!    print *,"y = "
+!    call print_vector(y,n)
 
-  call Usolve(LU,y,n,x)
-  print *, "x = "
-  call write_solution("x_1.dat",x,n)
+    call Usolve(LU,y,n,x)
+    print *,"x = "
+    call write_solution(outFile,x,n)
+  end do
+  print *,' '
+
+!  call getLU(A,n,LU)
+!  print*,"'LU' = "
+!  call print_matrix(LU,n)
+
+!  call Lsolve(LU,b,n,y)
+!  print *, "y = "
+!  call print_vector(y,n)
+
+!  call Usolve(LU,y,n,x)
+!  print *, "x = "
+!  call write_solution("x_1.dat",x,n)
 
   !Deallocate everything we allocated
   deallocate(x)
