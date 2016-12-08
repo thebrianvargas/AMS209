@@ -107,12 +107,15 @@ def solution_check(x,solFile,threshold=10**-6):
    #compute error between python and fortran solutions
    error = np.linalg.norm(x-fortran_x)
    if error > threshold:
+      print "FAIL"
       print "Error too large in file: "+solFile
       print "Fortran x = "
       print fortran_x
       print "Python x = "
       print x
       print error
+   else:
+      print "PASS"
    return error
 
 def moveFiles():
