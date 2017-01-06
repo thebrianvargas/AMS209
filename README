@@ -1,0 +1,10 @@
+This file contains my coursework for AMS209 Scientific Computing at UC Santa Cruz.
+I obtained an A+ in this class, my first ever A+ as a college student!
+
+Feel free to navigate through the files to see my progression applying scientific computing principals in Fortran and Python.
+The main tools used in this course were: Fortran, Python, Unix commands, Git version control, and LaTeX.
+
+The final project is a more sophisticated example in which I brought together everything we learned in the course.
+It combines Fortran and Python to solve the numerical linear algebra problem Ax=b using LU Decomposition.
+It uses Fortran 90 as the computing engine and Python 2 as the main driver interacting with the linux operating system.
+Note the clever tactics employed to attempt to save a bit of memory when solving!
